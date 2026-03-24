@@ -1,0 +1,103 @@
+# Product Requirement Document
+**Project:** Personal Professional Landing Page
+**Owner:** Drew Peterson
+**Course:** BAIS 3300 — Digital Product Management, University of Iowa
+**Date:** March 2026
+
+---
+
+## 01 — Problem Statement
+
+Drew Peterson is a dual B.B.A. student in Finance and Business Analytics & Information Systems at the University of Iowa, graduating December 2026. He is targeting Financial Analyst roles at commercial real estate firms in the Midwest.
+
+A PDF resume cannot be found through a Google search. Drew's landing page solves a discoverability problem by creating a permanent, searchable URL tied to his name and professional identity — giving CRE recruiters a live destination to find and evaluate him online. The page complements his resume but does not duplicate it; it serves as a curated professional presence that can be shared during applications and discovered organically.
+
+---
+
+## 02 — Target Audience
+
+**Primary visitors:** Recruiters and hiring managers at commercial real estate firms in the Midwest (e.g., CBRE, JLL, Colliers, regional CRE firms in Chicago, Des Moines, Minneapolis, and Kansas City).
+
+**What they are looking for when they arrive:**
+- Evidence of relevant internship experience in finance or real estate-adjacent roles
+- Proof of analytical skills through tools and coursework
+- Confirmation that Drew is specifically interested in CRE financial analysis, not just finance generally
+- Easy access to his LinkedIn and GitHub profiles to evaluate his professional and technical presence
+
+---
+
+## 03 — Goals & Success Metrics
+
+| Goal | How We Measure It |
+|------|------------------|
+| Page is live and publicly accessible | URL resolves without errors in a browser |
+| Page is findable by target employers | URL is shared directly with at least 5 target CRE companies as part of job applications within 30–60 days of launch |
+| Page accurately represents Drew's professional identity | All content (bio, skills, contact) is accurate and up to date at launch |
+
+---
+
+## 04 — Required Content
+
+### Hero
+- **Must** display full name: **Drew Peterson**
+- **Must** display professional tagline: **Finance & Analytics Student**
+- **Must** include a professional headshot (file: `images/headshot.png`)
+
+### Bio
+- **Must** include academic status: dual B.B.A. candidate, University of Iowa
+- **Must** include majors: Finance and Business Analytics & Information Systems
+- **Must** include anticipated graduation date: December 2026
+- **Must** include career interest: Financial Analyst roles at commercial real estate firms in the Midwest
+
+### Profile Photo
+- **Must** use the provided headshot stored at `images/headshot.png`
+- Clean light-gray background, professional appearance — ready to use as-is
+
+### Skills
+- **Must** display the following technical skills: Excel, PowerBI, Python, SQL
+- **Should** be presented as a distinct skills section, not buried in the bio
+
+### Projects
+- **Should** include at least 3 featured projects demonstrating analytical ability
+- **Status:** Content not yet developed — this section is a placeholder for this iteration
+- **Recommended next step:** Identify 1–3 class assignments or analyses from Quantitative Reasoning for Business, Computational Thinking, or Analytics coursework that can be polished and featured. Each project entry should include: project title, tools used, and a one-sentence outcome or description.
+- **Must** include the projects section in the page structure, even if populated with placeholder content at launch
+
+### Experience (Supporting Content)
+- **Should** reference internship experience to support credibility with CRE recruiters
+- Relevant role: **Intern, Watts Group** (Coralville, IA — Spring–Summer 2025): finance and accounting tasks, data entry, assisting homebuyers with housing selections
+- Supporting role: **Assistant, Flummerfelt Homes** (Nevada, IA — Summer 2024): operations across 9 mobile home parks, resident relations, inventory management
+
+### Contact
+- **Must** include LinkedIn URL: `linkedin.com/in/drew-peterson-933570264`
+- **Must** include GitHub URL: `github.com/DrewPetersonGit`
+- **Must** include email address: `Drew-Peterson@uiowa.edu`
+
+---
+
+## 05 — Scope
+
+| In Scope This Week | Out of Scope |
+|--------------------|--------------|
+| Hero section (name, tagline, headshot) | Blog or written articles |
+| Bio section (academic status, major, graduation, career interest) | Testimonials or references |
+| Skills section (Excel, PowerBI, Python, SQL) | Contact form |
+| Projects section (placeholder structure, content TBD) | Animations or interactive effects |
+| Contact section (LinkedIn, GitHub, email) | Downloadable files of any kind |
+| Publishing the page to a live public URL | Analytics or visitor tracking |
+
+---
+
+## 06 — Assumptions & Constraints
+
+**Already in place:**
+- GitHub repository created and ready for files
+- Professional headshot available (`images/headshot.png`)
+- LinkedIn profile live at `linkedin.com/in/drew-peterson-933570264`
+- GitHub profile at `github.com/DrewPetersonGit`
+
+**Constraints:**
+- **Time:** 1–2 hours available for this iteration — scope is intentionally tight
+- **Skill level:** Comfortable with HTML and CSS; no advanced JavaScript or framework required for this build
+- **Projects content:** Not yet developed — page will launch with a placeholder projects section; content to be added in a future iteration
+- **Budget:** No paid tools or hosting costs assumed; free hosting (e.g., GitHub Pages) expected
