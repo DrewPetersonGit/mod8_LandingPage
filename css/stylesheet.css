@@ -1,0 +1,300 @@
+/* =============================================
+   DREW PETERSON — Personal Landing Page
+   ============================================= */
+
+/* Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* =============================================
+   CSS Custom Properties
+   ============================================= */
+:root {
+  --bg: #F8F9FA;
+  --text: #212529;
+  --accent: #1B3A6B;
+  --secondary-bg: #E9ECEF;
+  --max-width: 800px;
+}
+
+/* =============================================
+   Reset & Base
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* =============================================
+   Layout
+   ============================================= */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* =============================================
+   Navigation
+   ============================================= */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--secondary-bg);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 2rem;
+  height: 56px;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: var(--accent);
+  outline: none;
+  text-decoration: underline;
+}
+
+/* =============================================
+   Hero
+   ============================================= */
+.hero {
+  background-color: var(--secondary-bg);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.headshot {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* =============================================
+   Sections
+   ============================================= */
+.section {
+  padding: 60px 0;
+}
+
+.section-light {
+  background-color: var(--bg);
+}
+
+.section-alt {
+  background-color: var(--secondary-bg);
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.section p {
+  color: var(--text);
+  max-width: 680px;
+}
+
+/* =============================================
+   Skills
+   ============================================= */
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* =============================================
+   Projects
+   ============================================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.project-card {
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.section-light .project-card {
+  background-color: var(--secondary-bg);
+}
+
+.project-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.project-tools {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.projects-note {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
+/* =============================================
+   Experience
+   ============================================= */
+.experience-entry {
+  margin-bottom: 2rem;
+}
+
+.experience-entry:last-child {
+  margin-bottom: 0;
+}
+
+.experience-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.experience-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.experience-org {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.experience-date {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 0.4rem;
+}
+
+/* =============================================
+   Contact
+   ============================================= */
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  background-color: var(--accent);
+  color: #ffffff;
+  outline: none;
+}
+
+/* =============================================
+   Footer
+   ============================================= */
+.footer {
+  background-color: var(--text);
+  color: #adb5bd;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+}
+
+/* =============================================
+   Responsive — Mobile
+   ============================================= */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .nav-inner {
+    gap: 1.25rem;
+  }
+
+  .nav a {
+    font-size: 0.85rem;
+  }
+}
