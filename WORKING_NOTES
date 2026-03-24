@@ -1,1 +1,184 @@
-Working Notes
+# Working Notes — Drew Peterson Personal Landing Page
+
+> **Internal document — not intended for public audiences.**
+> This file is for developer and AI assistant reference only.
+
+---
+
+## How to Use This File (For AI Assistants)
+
+1. Read this entire file before suggesting changes or writing any code.
+2. Read `README.md` for the public-facing project description and `PRD` for full requirements.
+3. Read `standards` for the design system, color palette, typography rules, and code standards — these are non-negotiable.
+4. Do not change the folder structure or file naming conventions without discussion.
+5. Follow all conventions listed in the Conventions section exactly.
+6. Do not suggest any approach listed in "What Was Tried and Rejected."
+7. Ask clarifying questions before making large structural changes.
+8. This project was AI-assisted (built with Replit AI). Refactor conservatively — do not rewrite working sections without a clear reason.
+
+---
+
+## Current State
+
+**Last Updated:** 2026-03-24
+
+### What Is Working
+- [x] Sticky navigation bar with anchor links (About, Skills, Projects, Experience, Contact)
+- [x] Hero section with circular headshot, name, and tagline
+- [x] About section with academic status, majors, graduation date, and career interest
+- [x] Skills section with navy pill badges (Excel, PowerBI, Python, SQL)
+- [x] Projects section with 3 placeholder cards in a responsive 2-column grid
+- [x] Experience section (Watts Group 2025, Flummerfelt Homes 2024)
+- [x] Contact section with labeled badge links to LinkedIn, GitHub, and email
+- [x] Footer
+- [x] Responsive layout (single column mobile, two-column project grid on desktop)
+- [x] Google Fonts (Inter) loaded via `<link>` in `<head>`
+- [x] All external links open in new tab with `rel="noopener noreferrer"`
+- [x] Deployment configured as a static site
+- [x] Dev server workflow running on port 5000
+
+### What Is Partially Built
+- [ ] **Projects section** — Structure is in place and rendered, but content is placeholder text. Actual project titles, tools, and outcomes from Drew's coursework are not yet added.
+
+### What Is Not Started
+- [ ] Real project content (3 class assignments or analyses to feature per PRD section 04)
+
+---
+
+## Current Task
+
+**What I was working on when I last stopped:** The initial build was completed in full — all sections from the PRD were implemented, the folder structure was set up per the standards file, the headshot was placed at `images/headshot.png`, and the dev server workflow was configured. The deployment target was also set to static.
+
+**The very next step is:** Replace the three placeholder project cards in the Projects section with real content from Drew's coursework (project title, tools used, one-sentence outcome).
+
+---
+
+## Architecture and Tech Stack
+
+| Technology | Version | Why It Was Chosen |
+|---|---|---|
+| HTML5 | — | Required by `standards` file; semantic elements required throughout |
+| CSS3 | — | Required by `standards` file; vanilla CSS only, no frameworks allowed |
+| JavaScript | — | Minimal; `scripts.js` is a placeholder per the standards folder structure requirement |
+| Inter (Google Fonts) | — | Required by `standards` file for both heading and body font |
+| Python `http.server` | Python 3 built-in | Zero-dependency static file server; no build step needed; runs on port 5000 as required by Replit |
+
+---
+
+## Project Structure Notes
+
+```
+/
+├── index.html            # Single HTML file — all page content lives here
+├── css/
+│   └── stylesheet.css    # All styles — no inline styles or <style> tags allowed
+├── js/
+│   └── scripts.js        # Placeholder — required by standards folder structure; currently empty
+├── images/
+│   └── headshot.png      # Drew's professional headshot (copied from Headshot.png in root)
+├── PRD                   # Product Requirements Document (no .md extension)
+├── standards             # Design and technical standards (no .md extension)
+├── README.md             # Public-facing repo description
+├── WORKING_NOTES.md      # This file
+├── replit.md             # Replit agent memory / project documentation
+└── Headshot.png          # Original uploaded headshot (root copy — source file, do not delete)
+```
+
+- `css/stylesheet.css` is the single source of truth for all visual styling. No exceptions.
+- `js/scripts.js` exists to satisfy the folder structure defined in `standards`. Do not remove it.
+- `images/headshot.png` is the copy used by `index.html`. `Headshot.png` in the root is the original upload and should not be deleted.
+- The `PRD` and `standards` files have no file extension — do not rename them.
+- **Do not restructure the folder layout** — it is explicitly specified in `standards`.
+
+---
+
+## Data / Database
+
+This project has no persistent data, database, or flat files. It is a fully static site. All content is hard-coded in `index.html`.
+
+---
+
+## Conventions
+
+### Naming Conventions
+- Files: lowercase with hyphens where needed (`stylesheet.css`, `scripts.js`, `headshot.png`)
+- CSS classes: lowercase, hyphen-separated BEM-lite (e.g., `project-card`, `skill-tag`, `contact-link`, `nav-inner`)
+- Section IDs in HTML match the nav anchor text in lowercase: `#about`, `#skills`, `#projects`, `#experience`, `#contact`
+
+### Code Style Rules
+- No inline `style=""` attributes anywhere in HTML — all styles go in `css/stylesheet.css`
+- No `<style>` tags in any HTML file
+- Semantic HTML5 elements throughout: `<header>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<nav>`
+- All `<img>` elements must have a descriptive `alt` attribute
+- Heading hierarchy must be logical and unbroken: `<h1>` → `<h2>` → `<h3>`
+- External links: always `target="_blank" rel="noopener noreferrer"`
+
+### CSS Patterns
+- CSS custom properties defined in `:root` for the color palette (`--bg`, `--text`, `--accent`, `--secondary-bg`, `--max-width`)
+- Mobile-first base styles with `@media (min-width: ...)` for wider breakpoints
+- Max content width constrained with `.container` class set to `max-width: 800px; margin: 0 auto`
+- Google Fonts loaded via `<link>` in `<head>` — not via `@import` in CSS
+
+### Git Commit Style
+- Not yet established — no commits have been made manually during this session.
+
+---
+
+## Decisions and Tradeoffs
+
+- **Used Python's built-in `http.server` for the dev workflow:** No Node.js or npm is needed for a pure static site. This keeps the environment simple and dependency-free. Do not suggest switching to a Node-based dev server.
+- **All content is hard-coded in `index.html`:** The PRD and standards explicitly call for a static site with no JavaScript framework, no CMS, and no templating. Do not suggest a static site generator or component system.
+- **Google Fonts loaded via `<link>` in HTML `<head>` rather than CSS `@import`:** This is the recommended approach for performance (avoids render-blocking). Do not move it to the stylesheet.
+- **Projects section uses placeholder content at launch:** The PRD explicitly acknowledges that project content is not yet developed and flags it as a future iteration. This is intentional, not an oversight.
+- **Headshot stored at `images/headshot.png`:** The `standards` file mandates this exact path and reference convention. Do not change the image location or filename.
+- **Deployment configured as static:** The site has no backend, no API, and no server-side logic. Static deployment is the correct and most cost-effective choice.
+
+---
+
+## What Was Tried and Rejected
+
+- Nothing has been tried and rejected yet — this is the first build session.
+
+---
+
+## Known Issues and Workarounds
+
+- **404 in browser console for favicon:** The browser requests a `/favicon.ico` that does not exist. This is cosmetic and does not affect the page. No workaround is needed unless Drew wants to add a favicon in a future session.
+
+---
+
+## Browser / Environment Compatibility
+
+- **Tested in:** Replit's built-in preview (Chromium-based)
+- **Expected to work in:** Chrome, Safari, Firefox (per `standards` requirements)
+- **Mobile:** Responsive from 320px width and wider (per `standards`)
+- **Known incompatibilities:** None identified yet
+- **Dev environment:** Replit (NixOS, stable-25_05 channel); Python 3 built-in HTTP server
+
+---
+
+## Open Questions
+
+- What are the 3 actual projects Drew wants to feature? (Titles, tools used, one-sentence outcome for each — needed to replace placeholder project cards)
+- Does Drew want a favicon? (Currently produces a harmless 404 in the console)
+- Should the email link (`mailto:`) open in the same tab or a new tab? Currently same tab, which is standard behavior for mailto links.
+
+---
+
+## Session Log
+
+### 2026-03-24
+- **Accomplished:** Full initial build — created `index.html`, `css/stylesheet.css`, `js/scripts.js`, `images/headshot.png`; implemented all 7 sections (nav, hero, about, skills, projects, experience, contact, footer); configured dev server workflow on port 5000; configured static deployment; created `replit.md` and `WORKING_NOTES.md`
+- **Left incomplete:** Real project content for the Projects section (placeholder cards in place per PRD guidance)
+- **Decisions made:** Python `http.server` for dev; static deployment target; all content hard-coded in HTML; Google Fonts via `<link>` tag
+- **Next step when resuming:** Replace the 3 placeholder project cards with Drew's actual coursework projects (title, tools, one-sentence outcome each)
+
+---
+
+## Useful References
+
+- [Inter font on Google Fonts](https://fonts.google.com/specimen/Inter)
+- [MDN — HTML5 Semantic Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/)
+- [CSS Custom Properties (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
